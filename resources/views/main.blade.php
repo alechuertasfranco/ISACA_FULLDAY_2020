@@ -30,13 +30,13 @@
 
     <!-- header-start -->
     <header>
-        <div class="header-area" id="registro">
-            <div id="sticky-header" class="main-header-area ">
+        <div class="header-area" id="inicio">
+            <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center justify-content-between no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a href="index.html">
+                                <a href="#">
                                     <img src="./img/untisg_logo.png" alt="">
                                 </a>
                             </div>
@@ -45,9 +45,9 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="#registro">Inicio</a></li>
-                                        <li><a href="#registro">Inscripción</a></li>
-                                        <li><a href="#nosotros">nosotros</a></li>
+                                        <li><p onclick="toInicio()">Inicio</´p></li>
+                                        <li><p onclick="toInscripcion()">Inscripción</p></li>
+                                        <li><p href="#nosotros">Nosotros</p></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -62,110 +62,94 @@
     </header>
     <!-- header-end -->
 
-    <!-- slider_area_start -->
+    <!-- Inicio -->
     <div class="slider_area slider_bg_1">
         <div class="slider_text">
             <div class="container">
                 <div class="position_relv">
 
                     <div class="row" style="padding-top: 20px;padding-bottom: 20px;">
-                        <div class="col-lg-7 col-md-6">
+                        <div class="col">
                             <div class="title_text">
                                 <h3>VI<br>
                                     ISACA UNT <br>
                                     FULLDAY</h3>
-                                <a href="index.html#registro" class="boxed-btn-white">Participa</a>
+                                <button onclick="toInscripcion()" class="boxed-btn-white">Inscripción</button>
                             </div>
                         </div>
-                        <div  class="col-lg-5 col-md-6">
-                            <form action="#" id="form-inscripcion" class="request-form ftco-animate">
-                                <div class="serction_title_large">
-                                    <h3 style="color:#1447d0;font-size: 2rem;">Inscribirse</h3>
-                                </div>
-                                <div  class="form-group">
-                                    <label for="nom_ape" class="label">Nombre y Apellidos</label>
-                                    <input name="nom_ape" type="text" class="form-control" id="nom_ape" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="label">Correo</label>
-                                    <input name="email" type="text" class="form-control" id="email" required>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="form-group mr-2">
-                                        <label for="telefono" class="label">Teléfono</label>
-                                        <input name="telefono" type="number" class="form-control" id="telefono" maxlength="13">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pais" class="label">País</label>
-                                    <input name="pais" type="text" class="form-control" id="pais">
-                                </div>
-                                <div class="form-group">
-                                    <input id="btn-isaca-sub" type="submit" value="Registrar" class="submit-btn btn btn-primary py-2 px-4" >
-                                </div>
-                            </form>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="countDOwn_area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-4 col-md-2 col-lg-2">
-                        <div class="single_date">
-                            <i style="color:red;" class="fa fa-circle"></i>
-                            <span>En vivo</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-2 col-lg-2">
-                        <div class="single_date">
-                            <i class="ti-alarm-clock"></i>
-                            <span>12 diciembre 2020</span>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-5 col-md-3 col-lg-3">
-                        <span id="clock"></span>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- slider_area_end -->
+    <!-- Inicio end -->
 
-    <!-- about_area_start -->
-    <div class="about_area">
-        <div class="shape-1 d-none d-xl-block">
-            <img src="./img/about/shap1.png" alt="">
-        </div>
-        <div class="shape-2 d-none d-xl-block">
-            <img src="./img/about/shap2.png" alt="">
-        </div>
+    <!-- Incripción -->
+    <div class="inscripcion_area" id="inscripcion">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-6">
-                    <div class="">
-                        <h3 style="color:#1447d0; font-size:2rem">
-                            ISACA UNT FullDay
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-5 ">
-                    <span>Presentamos la tercera edición del Fullday ISACA UNT. Donde nos acompañarán ponentes de gran
-                        trayectoria nacional e internacional para darnos a conocer sus experiencias en Gobierno de TI,
-                        Seguridad de Información, Auditoría y Gestión de Riesgos de TI</span>
-                </div>
-                <div class="col-lg-1 col-md-1 ">
-
+                <div class="col">
+                    <form action="#" id="form-inscripcion" class="request-form ftco-animate">
+                        @csrf
+                        <div class="serction_title_large">
+                            <h3 style="color:#003D4F ;font-size: 2rem;">Inscripción</h3>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <label for="apellidos" class="label">Apellidos</label>
+                                <input name="apellidos" type="text" class="form-control" id="apellidos" required>
+                            </div>
+                            <div class="form-group col-12 col-md-6">
+                                <label for="nombres" class="label">Nombres</label>
+                                <input name="nombres" type="text" class="form-control" id="nombres" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-8">
+                                <label for="email" class="label">Dirección de correo electronico</label>
+                                <input name="email" type="text" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group col-12 col-md-4">
+                                <label for="telefono" class="label">Nro de Teléfono</label>
+                                <input name="telefono" type="text" class="form-control" id="telefono" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-4">
+                                <label for="tipo" class="label">Tipo de inscripción</label>
+                                <select name="tipo" id="tipo" class="custom-select my-1 mr-sm-2" required>
+                                    <option value="" selected="selected" disabled="disabled">Seleccione un tipo</option>
+                                    <option value="PREGRADO">Estudiante de Pregrado</option>
+                                    <option value="POSGRADO">Profesional</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-12 col-md-8">
+                                <label for="organizacion" class="label">Organización o Universidad asociada</label>
+                                <input name="organizacion" type="text" class="form-control" id="organizacion" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="aprobacion">
+                                <label class="custom-control-label" for="aprobacion">Autorizo a UNT Isaca Student Group
+                                    a compartir mi información de contacto. Ayudando a soportar los eventos y
+                                    conferencias del ISG por parte de patrocinadores y expositores que apoyan para
+                                    mantener los precios de las conferencias asequibles a nuestros participantes. Su
+                                    nombre, título profesional y su dirección de correo electrónico pueden ser
+                                    proporcionados a los patrocinadores.</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input id="btn-isaca-sub" type="submit" value="Registrar"
+                                class="submit-btn btn btn-primary mt-4 py-2 px-4">
+                        </div>
+                    </form>
                 </div>
             </div>
-
         </div>
     </div>
-    <!-- about_area_end -->
+    <!-- Incripción end -->
+
     <!-- faq_area_Start -->
     <div class="faq_area" id="nosotros">
         <div class="container">
@@ -211,9 +195,33 @@
     </div>
     <!-- faq_area_end -->
 
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <div class="">
+                        <h3 style="color:#003D4F; font-size:2rem">
+                            ISACA UNT FullDay
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5 ">
+                    <span>Presentamos la tercera edición del Fullday ISACA UNT. Donde nos acompañarán ponentes de gran
+                        trayectoria nacional e internacional para darnos a conocer sus experiencias en Gobierno de TI,
+                        Seguridad de Información, Auditoría y Gestión de Riesgos de TI</span>
+                </div>
+                <div class="col-lg-1 col-md-1 ">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- about_area_end -->
+
     <!-- footer_start -->
     <footer class="footer footer_bg_1">
-
         <div class="footer_top">
             <div class="container">
                 <div class="row">
@@ -235,7 +243,7 @@
                             </h3>
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
-                                <li><a href="#registro">Inscripción</a></li>
+                                <li><a href="#inicio">Inscripción</a></li>
                                 <li><a href="#nosotros">Beneficios</a></li>
                             </ul>
                         </div>
@@ -252,7 +260,10 @@
                         <p class="copy_right text-center">
 
                             ISACA UNT ISG &copy;
-                            <script>document.write(new Date().getFullYear());</script>
+                            <script>
+                                document.write(new Date().getFullYear());
+
+                            </script>
 
                         </p>
                     </div>
@@ -261,11 +272,6 @@
         </div>
     </footer>
     <!-- footer_end -->
-
-
-
-
-
 
     <!-- JS here -->
     <script src="./js/vendor/modernizr-3.5.0.min.js"></script>
@@ -294,9 +300,9 @@
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/mail-script.js"></script>
 
-    <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <script src="./js/main.js"></script>
     <script src="./js/inscripcion.js"></script>
 
 </body>

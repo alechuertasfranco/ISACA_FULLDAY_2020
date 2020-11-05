@@ -207,7 +207,7 @@ p {
 /* line 73, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 
 label {
-    color: #7e7e7e;
+    color: #5c5c5c;
     cursor: pointer;
     font-size: 14px;
     font-weight: 400;
@@ -837,7 +837,6 @@ h3 {
     content: "";
     width: 128px;
     height: 4px;
-    background-image: url(../img/speakers/line.png);
     top: 50%;
     margin-bottom: 2px;
     right: -158px;
@@ -1067,7 +1066,7 @@ h3 {
 
 /* line 43, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 
-.header-area .main-header-area .main-menu ul li a {
+.header-area .main-header-area .main-menu ul li p {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
@@ -1080,14 +1079,14 @@ h3 {
 
 @media (min-width: 992px) and (max-width: 1200px) {
     /* line 43, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
-    .header-area .main-header-area .main-menu ul li a {
+    .header-area .main-header-area .main-menu ul li p {
         padding: 35px 8px 35px 8px;
     }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
     /* line 43, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
-    .header-area .main-header-area .main-menu ul li a {
+    .header-area .main-header-area .main-menu ul li p {
         padding: 35px 8px 35px 8px;
     }
 }
@@ -1095,20 +1094,20 @@ h3 {
 
 /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 
-.header-area .main-header-area .main-menu ul li a i {
+.header-area .main-header-area .main-menu ul li p i {
     font-size: 9px;
 }
 
 @media (max-width: 767px) {
     /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
-    .header-area .main-header-area .main-menu ul li a i {
+    .header-area .main-header-area .main-menu ul li p i {
         display: none !important;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
-    .header-area .main-header-area .main-menu ul li a i {
+    .header-area .main-header-area .main-menu ul li p i {
         display: none !important;
     }
 }
@@ -1116,14 +1115,15 @@ h3 {
 
 /* line 92, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 
-.header-area .main-header-area .main-menu ul li a:hover {
+.header-area .main-header-area .main-menu ul li p:hover {
     color: #25C02F;
+    cursor: pointer;
 }
 
 
 /* line 95, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 
-.header-area .main-header-area .main-menu ul li a.active {
+.header-area .main-header-area .main-menu ul li p.active {
     color: #0181F5;
 }
 
@@ -1210,7 +1210,7 @@ h3 {
     left: 0;
     right: 0;
     z-index: 99;
-    background: #000;
+    background: rgba(0, 61, 80, 0.8);
     transform: translateY(70px);
     transition: transform 500ms ease, background 500ms ease;
     -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -1524,13 +1524,6 @@ h3 {
 }
 
 
-/* line 135, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
-
-.slider_area .countDOwn_area {
-    /* padding-top: 60px; */
-}
-
-
 /* line 138, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 
 .slider_area .countdown_time {
@@ -1638,39 +1631,20 @@ h3 {
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
 
 .about_area {
+    background: linear-gradient(#005C5F 0%, #00977B 100%);
+}
+
+.about_area,
+.inscripcion_area {
     padding-top: 50px;
     padding-bottom: 50px;
     position: relative;
 }
 
-
-/* line 5, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
-
-.about_area .shape-1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-
-/* line 10, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
-
-.about_area .shape-2 {
-    position: absolute;
-    bottom: 15%;
-    right: 0;
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-    /* line 10, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
-    .about_area .shape-2 {
-        bottom: 3%;
-    }
-}
-
 @media (max-width: 767px) {
     /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
-    .about_area {
+    .about_area,
+    .inscripcion_area {
         padding-top: 40px;
         padding-bottom: 30px;
     }
@@ -1678,10 +1652,15 @@ h3 {
 
 @media (min-width: 768px) and (max-width: 991px) {
     /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
-    .about_area {
+    .about_area,
+    .inscripcion_area {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+}
+
+.inscripcion_area {
+    background: linear-gradient(#090B2F 0%, #003C4F 100%);
 }
 
 
@@ -2415,7 +2394,7 @@ h3 {
 /* line 96, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_faq.scss */
 
 .faq_area .btn-link:hover {
-    color: #0056b3;
+    color: #003D50;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
@@ -2629,7 +2608,7 @@ h3 {
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 
 .footer_bg_1 {
-    background-color: #02c856;
+    background: linear-gradient(#00977B 0%, #fff 100%);
 }
 
 
@@ -5037,19 +5016,6 @@ h6 {
 }
 
 
-/* line 14, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.blog_area a:hover,
-.blog_area a :hover {
-    background: -webkit-linear-gradient(131deg, #0181F5 0%, #0181F5 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-
-
 /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
 
 .single-blog {
@@ -5114,173 +5080,6 @@ h6 {
     display: inline-block;
     font-size: 13px;
     font-weight: 300;
-}
-
-
-/* line 74, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog .tag {
-    text-align: left;
-    display: inline-block;
-    float: left;
-    font-size: 13px;
-    font-weight: 300;
-    margin-right: 22px;
-    position: relative;
-}
-
-
-/* line 84, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog .tag:after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 10px;
-    background: #acacac;
-    right: -12px;
-    top: 7px;
-}
-
-@media (max-width: 1199px) {
-    /* line 74, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .single-blog .tag {
-        margin-right: 8px;
-    }
-    /* line 98, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .single-blog .tag:after {
-        display: none;
-    }
-}
-
-
-/* line 104, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog .likes {
-    margin-right: 16px;
-}
-
-@media (max-width: 800px) {
-    /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .single-blog {
-        margin-bottom: 30px;
-    }
-}
-
-
-/* line 112, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog .single-blog-content {
-    padding: 30px;
-}
-
-
-/* line 116, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog .single-blog-content .meta-bottom p {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-
-/* line 121, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog .single-blog-content .meta-bottom i {
-    color: #fdcb9e;
-    font-size: 13px;
-    margin-right: 7px;
-}
-
-@media (max-width: 1199px) {
-    /* line 112, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .single-blog .single-blog-content {
-        padding: 15px;
-    }
-}
-
-
-/* line 135, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.single-blog:hover .thumb:after {
-    opacity: .7;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-
-@media (max-width: 1199px) {
-    /* line 143, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .single-blog h4 {
-        transition: all 300ms linear 0s;
-        border-bottom: 1px solid #dfdfdf;
-        padding-bottom: 14px;
-        margin-bottom: 12px;
-    }
-    /* line 149, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .single-blog h4 a {
-        font-size: 18px;
-    }
-}
-
-
-/* line 157, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.full_image.single-blog {
-    position: relative;
-}
-
-
-/* line 160, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.full_image.single-blog .single-blog-content {
-    position: absolute;
-    left: 35px;
-    bottom: 0;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-
-@media (min-width: 992px) {
-    /* line 160, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-    .full_image.single-blog .single-blog-content {
-        bottom: 100px;
-    }
-}
-
-
-/* line 179, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.full_image.single-blog h4 {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    border-bottom: none;
-    padding-bottom: 5px;
-}
-
-
-/* line 185, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.full_image.single-blog a {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-/* line 195, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.full_image.single-blog .date {
-    color: #fff;
-}
-
-
-/* line 200, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
-
-.full_image.single-blog:hover .single-blog-content {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
 }
 
 
@@ -6778,311 +6577,6 @@ h6 {
 /*============ End Blog Single Styles  =============*/
 
 
-/**************** blog part css start ****************/
-
-
-/* line 2, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part {
-    margin-bottom: 140px;
-}
-
-@media (max-width: 576px) {
-    /* line 2, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part {
-        margin-bottom: 0px;
-        padding: 0px 0px 70px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* line 2, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part {
-        margin-bottom: 0px;
-        padding: 0px 0px 70px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* line 2, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part {
-        margin-bottom: 0px;
-        padding: 0px 0px 70px;
-    }
-}
-
-
-/* line 19, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .blog_right_sidebar .widget_title {
-    font-size: 20px;
-    margin-bottom: 40px;
-    font-style: inherit !important;
-}
-
-@media (max-width: 576px) {
-    /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog {
-        margin-bottom: 140px;
-        margin-top: 20px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog {
-        margin-bottom: 140px;
-        margin-top: 20px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog {
-        margin-bottom: 140px;
-        margin-top: 20px;
-    }
-}
-
-
-/* line 40, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card-img-top {
-    border-radius: 0px;
-}
-
-
-/* line 43, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card {
-    border: 0px solid transparent;
-    border-radius: 0px;
-    background-color: transparent;
-    position: relative;
-}
-
-
-/* line 48, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card .card-body {
-    padding: 25px 10px 29px 40px;
-    background-color: #fff;
-    position: absolute;
-    left: 20px;
-    bottom: -140px;
-    box-shadow: -7.552px 9.326px 20px 0px rgba(1, 84, 85, 0.1);
-    border-radius: 10px;
-}
-
-@media (max-width: 576px) {
-    /* line 48, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card .card-body {
-        padding: 15px;
-        left: 10px;
-        bottom: -140px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* line 48, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card .card-body {
-        padding: 15px;
-        left: 10px;
-        bottom: -140px;
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    /* line 48, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card .card-body {
-        padding: 20px;
-    }
-}
-
-
-/* line 72, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card .card-body a {
-    color: #0181F5;
-    text-transform: uppercase;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-}
-
-
-/* line 76, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card .card-body a:hover {
-    background: -webkit-linear-gradient(131deg, #ff7e5f 0%, #feb47b 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-/* line 83, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card .dot {
-    position: relative;
-    padding-left: 20px;
-}
-
-
-/* line 86, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card .dot:after {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    top: 5px;
-    left: 0;
-    background-color: #0181F5;
-    border-radius: 50%;
-}
-
-
-/* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card span {
-    color: #8a8a8a;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-@media (max-width: 576px) {
-    /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card span {
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card span {
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card span {
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card span {
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-}
-
-
-/* line 119, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card h5 {
-    font-weight: 600;
-    line-height: 1.5;
-    font-size: 20px;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-    text-transform: capitalize;
-    margin-bottom: 22px;
-}
-
-@media (max-width: 576px) {
-    /* line 119, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card h5 {
-        margin-bottom: 10px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* line 119, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card h5 {
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* line 119, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card h5 {
-        margin-bottom: 10px;
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    /* line 119, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card h5 {
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-}
-
-
-/* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card h5:hover {
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-    background: -webkit-linear-gradient(131deg, #feb47b 0%, #ff7e5f 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: 1s;
-}
-
-
-/* line 150, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card ul li {
-    display: inline-block;
-    color: #8a8a8a;
-    margin-right: 14px;
-}
-
-@media (max-width: 576px) {
-    /* line 150, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card ul li {
-        margin-right: 10px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* line 150, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card ul li {
-        margin-right: 10px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* line 150, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card ul li {
-        margin-right: 10px;
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    /* line 150, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-    .blog_part .single-home-blog .card ul li {
-        margin-right: 10px;
-    }
-}
-
-
-/* line 166, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
-
-.blog_part .single-home-blog .card ul li span {
-    margin-right: 10px;
-    font-size: 12px;
-}
-
-
 /*# sourceMappingURL=style.css.map */
 
 .request-form {
@@ -7130,7 +6624,7 @@ h6 {
 }
 
 .faq_area {
-    background-color: #1447d0;
+    background: linear-gradient(#003C4F 0%, #005C5F 100%);
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -7148,8 +6642,4 @@ h6 {
 
 .serction_title_large {
     padding-bottom: 30px;
-}
-
-.footer_top {
-    margin-top: 50px;
 }
