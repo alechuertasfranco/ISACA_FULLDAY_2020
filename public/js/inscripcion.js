@@ -13,14 +13,29 @@ formInscripcion.addEventListener('submit', (e) => {
     }
 })
 
+function toInicio() {
+    document.getElementById('inicio').scrollIntoView({ behavior: "smooth" });
+};
+
 
 function toInscripcion() {
     document.getElementById('inscripcion').scrollIntoView({ behavior: "smooth" });
 };
 
-function toInicio() {
-    document.getElementById('inicio').scrollIntoView({ behavior: "smooth" });
+
+function toPago() {
+    document.getElementById('pago').scrollIntoView({ behavior: "smooth" });
 };
+
+
+function toNosotros() {
+    document.getElementById('nosotros').scrollIntoView({ behavior: "smooth" });
+};
+
+function redirect(url) {
+    console.log(url)
+    window.open(url, '_blank');
+}
 
 
 const inscribir = () => {
