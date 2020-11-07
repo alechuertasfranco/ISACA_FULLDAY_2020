@@ -82,9 +82,9 @@
                     <div class="row" style="padding-top: 20px;padding-bottom: 20px;">
                         <div class="col">
                             <div class="title_text">
-                                <h3>VI<br>
-                                    ISACA UNT <br>
-                                    FULLDAY</h3>
+                                <h4>VI UNT ISACA</h4>
+                                <h3><span>FULL</span><br>
+                                    DAY</h3>
                                 <button onclick="toInscripcion()" class="boxed-btn-white">Inscripción</button>
                             </div>
                         </div>
@@ -202,6 +202,9 @@
                                 <div class="precio">
                                     <h3>S/. 15</h3>
                                 </div>
+                                <div class="precio-dsct">
+                                    <h3>S/. 25</h3>
+                                </div>
                                 <div class="description">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item"><i class="fas fa-certificate mr-3"></i> Certificado</li>
@@ -220,6 +223,9 @@
                                 </div>
                                 <div class="precio">
                                     <h3>S/. 25</h3>
+                                </div>
+                                <div class="precio-dsct">
+                                    <h3>S/. 40</h3>
                                 </div>
                                 <div class="description">
                                     <ul class="list-group list-group-flush">

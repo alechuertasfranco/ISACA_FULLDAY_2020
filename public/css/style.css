@@ -1269,10 +1269,23 @@
     /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
     
     .slider_area .title_text h3 {
-        font-size: 90px;
+        font-size: 140px;
         font-weight: 700;
         text-transform: capitalize;
-        line-height: 100px;
+        line-height: 120px;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    
+    .slider_area .title_text h3 span {
+        color: #28B92A;
+    }
+    
+    .slider_area .title_text h4 {
+        font-size: 70px;
+        font-weight: 700;
+        text-transform: capitalize;
+        line-height: 60px;
         color: #fff;
         /* margin-bottom: 66px; */
     }
@@ -5687,7 +5700,16 @@
     #precios .precio h3 {
         font-weight: 700;
         margin-bottom: 20px;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+    }
+    
+    #precios .precio-dsct h3 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        text-decoration: line-through;
+        text-decoration-thickness: 15%;
+        color: #BE272A;
     }
     
     #precios .box:hover .precio h3 {

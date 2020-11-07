@@ -51,25 +51,21 @@ const inscribir = () => {
         type: "POST",
         url: 'participante',
         data: data,
-        beforeSend: function() {
-            console.log("enviando")
-            submit.html('Enviando....');
-        },
         success: function(res) {
             console.log(res);
             if (res == 1) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Incripción completada',
-                    text: `Esperamos tu validación ${formInscripcion.nombres.value}`,
-                    footer: '<a target="_blank" href="https://www.facebook.com/ISACAUNPRG">¿Necesitas más información?</a>'
+                    title: 'Incripción realizada',
+                    text: `Gracias ${formInscripcion.nombres.value}`,
+                    footer: '<a target="_blank" href="https://www.facebook.com/ISACAUNT">Visítanos en Facebook</a>'
                 })
             } else {
                 Swal.fire({
                     icon: 'warning',
-                    title: 'Este correo ya está inscrito',
-                    text: `Gracias por haberte inscrito ${formInscripcion.nombres.value}`,
-                    footer: '<a target="_blank" href="https://www.facebook.com/ISACAUNPRG">¿Tienes algún problema?</a>'
+                    title: `Ya estabas inscrito ${formInscripcion.nombres.value}`,
+                    text: `Continua con el siguiente paso y revisa nuestros métodos de pago`,
+                    footer: '<a target="_blank" href="mailto:untstudentgroup.isaca@gmail.com">¿Quieres saber más? Contactanos</a>'
                 })
             }
             formInscripcion.reset();
