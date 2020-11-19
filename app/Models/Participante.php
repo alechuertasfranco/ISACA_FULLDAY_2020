@@ -11,6 +11,6 @@ class Participante extends Model
     protected $primaryKey='id_participante';
     public $timestamps = false;
     protected $fillable = ['apellidos', 'nombres', 'email', 'telefono',
-    'tipo', 'organizacion', 'aprobacion', 'pago', 'monto'];
+    'tipo', 'organizacion', 'aprobacion', 'pago', 'metodo', 'monto'];
     protected $table = 'participantes';
 }
