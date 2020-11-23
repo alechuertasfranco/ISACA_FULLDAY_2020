@@ -44,6 +44,9 @@ const inscribir = () => {
     let data = $('#form-inscripcion').serialize();
     var submit = $('#btn-isaca-sub');
     data = data + '&aprobacion=' + aprobación.checked
+    console.log(token)
+    console.log(data)
+    console.log(aprobación.checked)
     $.ajax({
         headers: {
             "X-CSRF-TOKEN": token,

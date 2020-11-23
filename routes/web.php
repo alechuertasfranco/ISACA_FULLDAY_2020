@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::resource('participante', 'ParticipanteController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

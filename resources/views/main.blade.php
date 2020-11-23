@@ -92,10 +92,10 @@
                             <div class="title_text text-right mt-auto p-2">
                                 <button class="boxed-btn-date">
                                     <div class="btn-box box-dia">
-                                        20
+                                        19
                                     </div>
                                     <div class="btn-box box-mes">Diciembre</div>
-                                    <div class="btn-box box-hora">9:00 AM</div>
+                                    <div class="btn-box box-hora">8:30 AM</div>
                                 </button>
                             </div>
                         </div>
@@ -205,6 +205,7 @@
                                 <div class="precio-dsct">
                                     <h3>S/. 25</h3>
                                 </div>
+
                                 <div class="description">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item"><i class="fas fa-certificate mr-3"></i> Certificado</li>
@@ -248,6 +249,7 @@
                         <h3>
                             Metodos de Pago
                         </h3>
+                        <p style="color: white">Al titular: Max Alec Huertas Franco</p>
                     </div>
                 </div>
             </div>
@@ -293,6 +295,13 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-success text-center" role="alert">
+                        Una vez realizado el pago envianos tu voucher al correo <a target="_blank" href="mailto:untstudentgroup.isaca@gmail.com">untstudentgroup.isaca@gmail.com</a> o un whatsapp al número 949171842
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -415,8 +424,8 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5">
-                        <div class="footer_widget">
+                    <div class="col-md-6">
+                        <div class="footer_widget footer_isaca">
                             <h3 class="footer_title">
                                 UNT ISACA Student Group
                             </h3>
@@ -426,23 +435,35 @@
                                 del desarrollo y la innovación tecnológica.</span>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="footer_widget">
                             <h3 class="footer_title">
                                 Enlaces
                             </h3>
                             <ul>
                                 <li>
-                                    <p onclick="toInicio()">Inicio</p>
+                                    <p onclick="toInicio()">
+                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                        Inicio
+                                    </p>
                                 </li>
                                 <li>
-                                    <p onclick="toInscripcion()">Inscripción</a>
+                                    <p onclick="toInscripcion()">
+                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                        Inscripción
+                                    </p>
                                 </li>
                                 <li>
-                                    <p onclick="toPago()">Pago</a>
+                                    <p onclick="toPago()">
+                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                        Pago
+                                    </p>
                                 </li>
                                 <li>
-                                    <p onclick="toNosotros()">Nosotros</a>
+                                    <p onclick="toNosotros()">
+                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                        Nosotros
+                                    </p>
                                 </li>
                             </ul>
                         </div>
@@ -453,7 +474,7 @@
                                 Síguenos
                             </h3>
                             <ul>
-                                <li><a target="_blank" href="https://www.facebook.com/ISACAUNT">Facebook</a></li>
+                                <li><i class="fab fa-facebook mr-3 footer_icon"></i><a target="_blank" href="https://www.facebook.com/ISACAUNT">Facebook</a></li>
                             </ul>
                         </div>
                     </div>
