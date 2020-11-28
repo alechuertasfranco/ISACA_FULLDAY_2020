@@ -1,79 +1,30 @@
-<!Doctype html>
-<html lang="es">
+@extends('layouts.isaca')
 
-<head>
-    <meta charset="UTF-8">
-    <title>ISACA UNT FullDay</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="shortcut icon" type="image/x-icon" href="./img/untisg_icon.jpeg">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/aos.css">
-    <link rel="stylesheet" href="./css/magnific-popup.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./css/themify-icons.css">
-    <link rel="stylesheet" href="./css/nice-select.css">
-    <link rel="stylesheet" href="./css/flaticon.css">
-    <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="./css/slicknav.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
-
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- header-start -->
-    <header>
-        <div class="header-area" id="inicio">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid p-0">
-                    <div class="row align-items-center justify-content-between no-gutters">
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo-img">
-                                <a href="#">
-                                    <img src="./img/untisg_logo.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8">
-                            <div class="main-menu  d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li>
-                                            <p onclick="toInicio()">Inicio</p>
-                                        </li>
-                                        <li>
-                                            <p onclick="toInscripcion()">Inscripción</a>
-                                        </li>
-                                        <li>
-                                            <p onclick="toPago()">Pago</a>
-                                        </li>
-                                        <li>
-                                            <p onclick="toNosotros()">Nosotros</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@section('nav_bar_items')
+    <div class="col-xl-8 col-lg-8">
+        <div class="main-menu  d-none d-lg-block">
+            <nav>
+                <ul id="navigation">
+                    <li>
+                        <p onclick="toInicio()">Inicio</p>
+                    </li>
+                    <li>
+                        <p onclick="toInscripcion()">Inscripción</a>
+                    </li>
+                    <li>
+                        <p onclick="toPago()">Pago</a>
+                    </li>
+                    <li>
+                        <p onclick="toNosotros()">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </header>
-    <!-- header-end -->
+    </div>
+@endsection
 
-    <!-- Inicio -->
+<!-- Inicio -->
+@section('inicio')
     <div class="slider_area slider_bg_1">
         <div class="slider_text">
             <div class="container">
@@ -104,9 +55,11 @@
             </div>
         </div>
     </div>
-    <!-- Inicio end -->
+@endsection
+<!-- Inicio end -->
 
-    <!-- Incripción -->
+<!-- Incripción -->
+@section('inscripcion')
     <div class="inscripcion_area" id="inscripcion">
         <div class="container">
             <div class="row">
@@ -170,9 +123,11 @@
             </div>
         </div>
     </div>
-    <!-- Incripción end -->
+@endsection
+<!-- Incripción end -->
 
-    <!-- pay_area_Start -->
+<!-- pay_area_Start -->
+@section('pago')
     <div class="pay_area" id="pago">
         <div class="container mb-5">
             <div class="row">
@@ -193,8 +148,7 @@
             <section id="precios" class="site-section wow section-bg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 wow bounceInUp" data-aos-delay="0.1s"
-                            data-aos-duration="1.4s">
+                        <div class="col-md-6 wow bounceInUp" data-aos-delay="0.1s" data-aos-duration="1.4s">
                             <div class="box">
                                 <div class="box-header box-estudiante">
                                     <h4 class="title"><a>ESTUDIANTES</a></h4>
@@ -209,15 +163,17 @@
                                 <div class="description">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item"><i class="fas fa-certificate mr-3"></i> Certificado</li>
-                                        <li class="list-group-item"><i class="fas fa-graduation-cap mr-3"></i> Ponencias Magistrales</li>
-                                        <li class="list-group-item"><i class="fas fa-file-powerpoint mr-3"></i> Material visual</li>
-                                        <li class="list-group-item"><i class="fas fa-gifts mr-3"></i> Participacion en sorteos</li>
-                                      </ul>
+                                        <li class="list-group-item"><i class="fas fa-graduation-cap mr-3"></i> Ponencias
+                                            Magistrales</li>
+                                        <li class="list-group-item"><i class="fas fa-file-powerpoint mr-3"></i> Material
+                                            visual</li>
+                                        <li class="list-group-item"><i class="fas fa-gifts mr-3"></i> Participacion en
+                                            sorteos</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 wow bounceInUp" data-aos-delay="0.1s"
-                            data-aos-duration="1.4s">
+                        <div class="col-md-6 wow bounceInUp" data-aos-delay="0.1s" data-aos-duration="1.4s">
                             <div class="box">
                                 <div class="box-header box-profesional">
                                     <h4 class="title"><a>PROFESIONALES</a></h4>
@@ -231,10 +187,13 @@
                                 <div class="description">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item"><i class="fas fa-certificate mr-3"></i> Certificado</li>
-                                        <li class="list-group-item"><i class="fas fa-graduation-cap mr-3"></i> Ponencias Magistrales</li>
-                                        <li class="list-group-item"><i class="fas fa-file-powerpoint mr-3"></i> Material visual</li>
-                                        <li class="list-group-item"><i class="fas fa-gifts mr-3"></i> Participacion en sorteos</li>
-                                      </ul>
+                                        <li class="list-group-item"><i class="fas fa-graduation-cap mr-3"></i> Ponencias
+                                            Magistrales</li>
+                                        <li class="list-group-item"><i class="fas fa-file-powerpoint mr-3"></i> Material
+                                            visual</li>
+                                        <li class="list-group-item"><i class="fas fa-gifts mr-3"></i> Participacion en
+                                            sorteos</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -299,15 +258,19 @@
             <div class="row">
                 <div class="col">
                     <div class="alert alert-success text-center" role="alert">
-                        Una vez realizado el pago envianos tu voucher al correo <a target="_blank" href="mailto:untstudentgroup.isaca@gmail.com">untstudentgroup.isaca@gmail.com</a> o un whatsapp al número 949171842
+                        Una vez realizado el pago envianos tu voucher al correo <a target="_blank"
+                            href="mailto:untstudentgroup.isaca@gmail.com">untstudentgroup.isaca@gmail.com</a> o un whatsapp
+                        al número 949171842
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- pay_area_end -->
+@endsection
+<!-- pay_area_end -->
 
-    <!-- about_area_start -->
+<!-- about_area_start -->
+@section('about')
     <div class="about_area" id="nosotros">
         {{-- <div class="container">
             <div class="row">
@@ -330,10 +293,12 @@
 
         </div> --}}
     </div>
-    <!-- about_area_end -->
+@endsection
+<!-- about_area_end -->
 
 
-    <!-- sponsor_area_Start -->
+<!-- sponsor_area_Start -->
+@section('sponsor')
     <div class="sponsor_area" id="nosotros">
         <div class="container">
             <div class="row mb-5">
@@ -417,119 +382,69 @@
             </div>
         </div>
     </div>
-    <!-- sponsor_area_end -->
+@endsection
+<!-- sponsor_area_end -->
 
-    <!-- footer_start -->
-    <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="footer_widget footer_isaca">
-                            <h3 class="footer_title">
-                                UNT ISACA Student Group
-                            </h3>
-                            <span>Somos un grupo estudiantil de la UNT, que motivados por los temas de Auditoría y
-                                Seguridad de la Información promueve la educación más allá del aula y el interes en
-                                estos temas con el objetivo de apoyar en el crecimiento de la región como una cuna
-                                del desarrollo y la innovación tecnológica.</span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Enlaces
-                            </h3>
-                            <ul>
-                                <li>
-                                    <p onclick="toInicio()">
-                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                        Inicio
-                                    </p>
-                                </li>
-                                <li>
-                                    <p onclick="toInscripcion()">
-                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                        Inscripción
-                                    </p>
-                                </li>
-                                <li>
-                                    <p onclick="toPago()">
-                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                        Pago
-                                    </p>
-                                </li>
-                                <li>
-                                    <p onclick="toNosotros()">
-                                        <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                        Nosotros
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Síguenos
-                            </h3>
-                            <ul>
-                                <li><i class="fab fa-facebook mr-3 footer_icon"></i><a target="_blank" href="https://www.facebook.com/ISACAUNT">Facebook</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<!-- footer_start -->
+@section('footer')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer_widget footer_isaca">
+                    <h3 class="footer_title">
+                        UNT ISACA Student Group
+                    </h3>
+                    <span>Somos un grupo estudiantil de la UNT, que motivados por los temas de Auditoría y
+                        Seguridad de la Información promueve la educación más allá del aula y el interes en
+                        estos temas con el objetivo de apoyar en el crecimiento de la región como una cuna
+                        del desarrollo y la innovación tecnológica.</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        Enlaces
+                    </h3>
+                    <ul>
+                        <li>
+                            <p onclick="toInicio()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Inicio
+                            </p>
+                        </li>
+                        <li>
+                            <p onclick="toInscripcion()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Inscripción
+                            </p>
+                        </li>
+                        <li>
+                            <p onclick="toPago()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Pago
+                            </p>
+                        </li>
+                        <li>
+                            <p onclick="toNosotros()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Nosotros
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        Síguenos
+                    </h3>
+                    <ul>
+                        <li><i class="fab fa-facebook mr-3 footer_icon"></i><a target="_blank"
+                                href="https://www.facebook.com/ISACAUNT">Facebook</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-
-                            UNT ISACA Student Group &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-
-                            </script>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer_end -->
-
-
-    <script src="./js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="./js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/isotope.pkgd.min.js"></script>
-    <script src="./js/ajax-form.js"></script>
-    <script src="./js/waypoints.min.js"></script>
-    <script src="./js/jquery.counterup.min.js"></script>
-    <script src="./js/imagesloaded.pkgd.min.js"></script>
-    <script src="./js/scrollIt.js"></script>
-    <script src="./js/jquery.scrollUp.min.js"></script>
-    <script src="./js/wow.min.js"></script>
-    <script src="./js/nice-select.min.js"></script>
-    <script src="./js/jquery.slicknav.min.js"></script>
-    <script src="./js/jquery.magnific-popup.min.js"></script>
-    <script src="./js/plugins.js"></script>
-    <script src="./js/jquery.ajaxchimp.min.js"></script>
-    <script src="./js/jquery.form.js"></script>
-    <script src="./js/jquery.validate.min.js"></script>
-    <script src="./js/mail-script.js"></script>
-    <script src="./js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-    <script src="./js/main.js"></script>
-    <script src="./js/inscripcion.js"></script>
-
-</body>
-
-</html>
+    </div>
+@endsection
+<!-- footer_end -->

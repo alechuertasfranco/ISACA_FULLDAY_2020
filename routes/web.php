@@ -22,3 +22,8 @@ Route::resource('participante', 'ParticipanteController');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/sortear', [App\Http\Controllers\HomeController::class, 'sortear'])->name('sortear');
+
+Route::get('/sorteo', function () {
+    return view('sorteo');
+});

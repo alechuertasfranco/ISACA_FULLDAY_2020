@@ -82,6 +82,9 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/participantes.js') }}" defer></script>
 </body>
 
 </html>

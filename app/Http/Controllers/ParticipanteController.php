@@ -46,7 +46,8 @@ class ParticipanteController extends Controller
 
     public function show($id)
     {
-        //
+        $participante = Participante::find($id);
+        return $participante;
     }
 
     public function edit($id)
@@ -56,7 +57,14 @@ class ParticipanteController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $participante = Participante::find($id);
+
+        $participante->pago = $request->pago;
+        $participante->metodo = $request->metodo;
+        $participante->monto = $request->monto;
+        $participante->save();
+
+        return $participante;
     }
 
     public function destroy($id)
