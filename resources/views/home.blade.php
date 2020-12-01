@@ -28,7 +28,7 @@
                                 <td>{{ $participante->nombres }} {{ $participante->apellidos }}</td>
                                 <td>{{ $participante->email }}</td>
                                 <td class="text-center">{{ $participante->tipo }}</td>
-                                @if ($participante->pago == 'COMPLETO')
+                                @if ($participante->pago != 'PENDIENTE')
                                 <td class="text-center"><span class="btn btn-sm btn-success">{{ $participante->pago }}</span></td>
                                 <td class="text-center">{{ $participante->monto }}</td>
                                 <td class="text-center"><button id_participante="{{ $participante->id_participante }}" class="btn btn-sm btn-primary btn-pagar" disabled>Pagar</button></td>
