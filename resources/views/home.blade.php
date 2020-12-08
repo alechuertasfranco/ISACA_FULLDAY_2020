@@ -22,6 +22,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $cont_total = 0;
+                                $cont_bcp = 0;
+                                $cont_interbank = 0;
+                                $monto_total = 0;
+                                $monto_bcp = 0;
+                                $monto_interbank = 0;
+                            @endphp
                             @foreach ($participantes as $participante)
                             <tr>
                                 <td>{{ $participante->id_participante }}</td>
@@ -38,7 +46,40 @@
                                 <td class="text-center"><button id_participante="{{ $participante->id_participante }}" class="btn btn-sm btn-primary btn-pagar">Pagar</button></td>
                                 @endif
                             </tr>
+                            @php
+                                if ($participante->monto > 0) {
+                                    $monto_total += $participante->monto;
+                                    $cont_total += 1;
+                                    if ($participante->metodo == "INTERBANK") {
+                                        $monto_interbank += $participante->monto;
+                                        $cont_interbank += 1;
+                                    } else {
+                                        $monto_bcp += $participante->monto;
+                                        $cont_bcp += 1;
+                                    }
+                                }
+                            @endphp
                             @endforeach
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                        <caption>Lista de Participantes</caption>
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="text-center">TOTAL</th>
+                                <th colspan="2" class="text-center">BCP</th>
+                                <th colspan="2" class="text-center">INTERBANK</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">{{ $cont_total }}</td>
+                                <td class="text-center">S/.{{ $monto_total }}</td>
+                                <td class="text-center">{{ $cont_bcp }}</td>
+                                <td class="text-center">S/.{{ $monto_bcp }}</td>
+                                <td class="text-center">{{ $cont_interbank }}</td>
+                                <td class="text-center">S/.{{ $monto_interbank }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
