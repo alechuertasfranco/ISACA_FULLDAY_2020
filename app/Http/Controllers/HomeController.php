@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function sortear()
     {
-        $participantes = Participante::where("pago", "!=", "PENDIENTE")->get();
+        $participantes = Participante::where("pago", "!=", "PENDIENTE")->where("tipo", "PREGRADO")->get();
         return $participantes;
     }
 }
