@@ -1,61 +1,65 @@
 @extends('layouts.isaca')
 
-@section('nav_bar_items')
-    <div class="col-xl-8 col-lg-8">
-        <div class="main-menu  d-none d-lg-block">
-            <nav>
-                <ul id="navigation">
-                    <li>
-                        <p onclick="toInicio()">Inicio</p>
-                    </li>
-                    <li>
-                        <p onclick="toInscripcion()">Registro</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/participante') }}">Inscripción</a>
-                    </li>
-                    <li>
-                        <p onclick="toPago()">Pago</a>
-                    </li>
-                    <li>
-                        <p onclick="toNosotros()">Nosotros</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-@endsection
-
 <!-- Inicio -->
 @section('inicio')
     <div class="slider_area slider_bg_1">
         <div class="slider_text">
             <div class="container">
-                <div class="position_relv">
-                    <div class="row" style="padding-top: 20px;padding-bottom: 20px;">
-                        <div class="title_text text-right mt-auto p-2">
-                            <button class="boxed-btn-date">
-                                <div class="btn-box box-dia">
-                                    18
-                                </div>
-                                <div class="btn-box box-mes">Diciembre</div>
-                                <div class="btn-box box-hora">9:00 AM</div>
-                            </button>
+                <form action="#" id="form-inscripcion" class="request-form ftco-animate">
+                    @csrf
+                    <div class="section_title_large">
+                        <h3 style="color:#003D4F ;font-size: 2rem;">Estado de inscripción</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-6">
+                            <label for="apellidos" class="label">Estado</label>
+                            <button></button>
                         </div>
-                        <div class="col d-flex align-items-end flex-column">
-                            <div class="title_text text-right">
-                                <h4>VII UNT ISACA</h4>
-                                <h3>
-                                    <span>FULL</span>
-                                    <br>DAY
-                                </h3>
-                                <div class="pr-3">
-                                    <button onclick="toInscripcion()" class="boxed-btn-white">Inscripción</button>
-                                </div>
-                            </div>
+                        <div class="form-group col-12 col-md-6">
+                            <label for="nombres" class="label">Nombres</label>
+                            <input name="nombres" type="text" class="form-control" id="nombres" required>
                         </div>
                     </div>
-                </div>
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-8">
+                            <label for="email" class="label">Dirección de correo electronico</label>
+                            <input name="email" type="text" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group col-12 col-md-4">
+                            <label for="telefono" class="label">Nro de Teléfono</label>
+                            <input name="telefono" type="text" class="form-control" id="telefono" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-4">
+                            <label for="tipo" class="label">Tipo de inscripción</label>
+                            <select name="tipo" id="tipo" class="custom-select my-1 mr-sm-2" required>
+                                <option value="" selected="selected" disabled="disabled">Seleccione un tipo</option>
+                                <option value="PREGRADO">Estudiante de Pregrado</option>
+                                <option value="POSGRADO">Profesional</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 col-md-8">
+                            <label for="organizacion" class="label">Organización o Universidad asociada</label>
+                            <input name="organizacion" type="text" class="form-control" id="organizacion" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="aprobacion" checked="true">
+                            <label class="custom-control-label" for="aprobacion">Autorizo a UNT Isaca Student Group
+                                a compartir mi información de contacto. Ayudando a soportar los eventos y
+                                conferencias del ISG por parte de patrocinadores y expositores que apoyan para
+                                mantener los precios de las conferencias asequibles a nuestros participantes. Su
+                                nombre, título profesional y su dirección de correo electrónico pueden ser
+                                proporcionados a los patrocinadores.</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input id="btn-isaca-sub" type="submit" value="Registrar"
+                            class="submit-btn btn btn-primary mt-4 py-2 px-4">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -68,61 +72,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <form action="#" id="form-inscripcion" class="request-form ftco-animate">
-                        @csrf
-                        <div class="section_title_large">
-                            <h3 style="color:#003D4F ;font-size: 2rem;">Inscripción</h3>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-12 col-md-6">
-                                <label for="apellidos" class="label">Apellidos</label>
-                                <input name="apellidos" type="text" class="form-control" id="apellidos" required>
-                            </div>
-                            <div class="form-group col-12 col-md-6">
-                                <label for="nombres" class="label">Nombres</label>
-                                <input name="nombres" type="text" class="form-control" id="nombres" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-12 col-md-8">
-                                <label for="email" class="label">Dirección de correo electronico</label>
-                                <input name="email" type="text" class="form-control" id="email" required>
-                            </div>
-                            <div class="form-group col-12 col-md-4">
-                                <label for="telefono" class="label">Nro de Teléfono</label>
-                                <input name="telefono" type="text" class="form-control" id="telefono" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-12 col-md-4">
-                                <label for="tipo" class="label">Tipo de inscripción</label>
-                                <select name="tipo" id="tipo" class="custom-select my-1 mr-sm-2" required>
-                                    <option value="" selected="selected" disabled="disabled">Seleccione un tipo</option>
-                                    <option value="PREGRADO">Estudiante de Pregrado</option>
-                                    <option value="POSGRADO">Profesional</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-12 col-md-8">
-                                <label for="organizacion" class="label">Organización o Universidad asociada</label>
-                                <input name="organizacion" type="text" class="form-control" id="organizacion" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="aprobacion" checked="true">
-                                <label class="custom-control-label" for="aprobacion">Autorizo a UNT Isaca Student Group
-                                    a compartir mi información de contacto. Ayudando a soportar los eventos y
-                                    conferencias del ISG por parte de patrocinadores y expositores que apoyan para
-                                    mantener los precios de las conferencias asequibles a nuestros participantes. Su
-                                    nombre, título profesional y su dirección de correo electrónico pueden ser
-                                    proporcionados a los patrocinadores.</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input id="btn-isaca-sub" type="submit" value="Registrar"
-                                class="submit-btn btn btn-primary mt-4 py-2 px-4">
-                        </div>
-                    </form>
+                    
                 </div>
             </div>
         </div>
@@ -391,63 +341,61 @@
 
 <!-- footer_start -->
 @section('footer')
-    <div class="footer_top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="footer_widget footer_isaca">
-                        <h3 class="footer_title">
-                            UNT ISACA Student Group
-                        </h3>
-                        <span>Somos un grupo estudiantil de la UNT, que motivados por los temas de Auditoría y
-                            Seguridad de la Información promueve la educación más allá del aula y el interes en
-                            estos temas con el objetivo de apoyar en el crecimiento de la región como una cuna
-                            del desarrollo y la innovación tecnológica.</span>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer_widget footer_isaca">
+                    <h3 class="footer_title">
+                        UNT ISACA Student Group
+                    </h3>
+                    <span>Somos un grupo estudiantil de la UNT, que motivados por los temas de Auditoría y
+                        Seguridad de la Información promueve la educación más allá del aula y el interes en
+                        estos temas con el objetivo de apoyar en el crecimiento de la región como una cuna
+                        del desarrollo y la innovación tecnológica.</span>
                 </div>
-                <div class="col-md-3">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">
-                            Enlaces
-                        </h3>
-                        <ul>
-                            <li>
-                                <p onclick="toInicio()">
-                                    <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                    Inicio
-                                </p>
-                            </li>
-                            <li>
-                                <p onclick="toInscripcion()">
-                                    <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                    Inscripción
-                                </p>
-                            </li>
-                            <li>
-                                <p onclick="toPago()">
-                                    <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                    Pago
-                                </p>
-                            </li>
-                            <li>
-                                <p onclick="toNosotros()">
-                                    <i class="fas fa-angle-up footer_icon mr-1"></i>
-                                    Nosotros
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        Enlaces
+                    </h3>
+                    <ul>
+                        <li>
+                            <p onclick="toInicio()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Inicio
+                            </p>
+                        </li>
+                        <li>
+                            <p onclick="toInscripcion()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Inscripción
+                            </p>
+                        </li>
+                        <li>
+                            <p onclick="toPago()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Pago
+                            </p>
+                        </li>
+                        <li>
+                            <p onclick="toNosotros()">
+                                <i class="fas fa-angle-up footer_icon mr-1"></i>
+                                Nosotros
+                            </p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-3">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">
-                            Síguenos
-                        </h3>
-                        <ul>
-                            <li><i class="fab fa-facebook mr-3 footer_icon"></i><a target="_blank"
-                                    href="https://www.facebook.com/ISACAUNT">Facebook</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_widget">
+                    <h3 class="footer_title">
+                        Síguenos
+                    </h3>
+                    <ul>
+                        <li><i class="fab fa-facebook mr-3 footer_icon"></i><a target="_blank"
+                                href="https://www.facebook.com/ISACAUNT">Facebook</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -32,11 +32,6 @@
 <!-- modal_area_end -->
 
 <body>
-
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
     <!-- header-start -->
     <header>
         <div class="header-area" id="inicio">
@@ -86,9 +81,7 @@
 
     <!-- footer_start -->
     <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            @yield('footer')
-        </div>
+        @yield('footer')
         <div class="copy-right_text">
             <div class="container">
                 <div class="footer_border"></div>

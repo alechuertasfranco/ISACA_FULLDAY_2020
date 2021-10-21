@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/sortear', [App\Http\Controllers\HomeController::class, 'sortear'])->name('sortear');
+Route::get('/participante', [App\Http\Controllers\HomeController::class, 'participante'])->name('participante');
 
 Route::get('/sorteo', function () {
     return view('sorteo');
