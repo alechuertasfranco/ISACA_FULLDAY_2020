@@ -27,16 +27,18 @@ class HomeController extends Controller
         $participantes = Participante::all();
         return view('home',compact('participantes'));
     }
-    
+
     public function sortear()
     {
         $participantes = Participante::where("pago", "!=", "PENDIENTE")->where("tipo", "PREGRADO")->get();
         return $participantes;
     }
     
-    public function participante()
-    {
-        $participantes = Participante::all();
-        return view('inscripcion', compact('participantes'));
-    }
+    // public function ganador($id, $premio)
+    // {
+    //     $participante = Participante::find($id);
+    //     $participante->premio = $premio
+    //     $participante->save()
+    //     return $participante;
+    // }
 }

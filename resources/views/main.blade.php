@@ -9,10 +9,7 @@
                         <p onclick="toInicio()">Inicio</p>
                     </li>
                     <li>
-                        <p onclick="toInscripcion()">Registro</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/participante') }}">Inscripción</a>
+                        <p onclick="toInscripcion()">Inscripción</a>
                     </li>
                     <li>
                         <p onclick="toPago()">Pago</a>
@@ -71,7 +68,7 @@
                     <form action="#" id="form-inscripcion" class="request-form ftco-animate">
                         @csrf
                         <div class="section_title_large">
-                            <h3 style="color:#003D4F ;font-size: 2rem;">Inscripción</h3>
+                            <h3 style="color:#003D4F ;font-size: 2rem;">Pre-inscripción</h3>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12 col-md-6">
