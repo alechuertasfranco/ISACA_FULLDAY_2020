@@ -2068,13 +2068,6 @@
         padding: 14px 0 16px 14px;
     }
 
-    @media (max-width: 767px) {
-        /* line 83, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_faq.scss */
-        .sponsor_area #accordion .card .card-header span {
-            display: none;
-        }
-    }
-    /* line 91, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_faq.scss */
 
     .sponsor_area .btn-link.focus,
     .sponsor_area .btn-link:focus {
@@ -5749,3 +5742,4 @@
     .header__toogleGroup {
         float: right;
     }
+

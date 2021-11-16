@@ -12,6 +12,7 @@ CREATE TABLE participantes(
     organizacion VARCHAR(150),
     aprobacion VARCHAR(5),
     pago VARCHAR(10),
+    metodo varchar(10) DEFAULT NULL,
     monto FLOAT,
     PRIMARY KEY(id_participante)
 );
